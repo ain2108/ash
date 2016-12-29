@@ -6,15 +6,9 @@ Makefile
 README
 shell.c
 shell.h
-myhmw1-tests.py
-written.txt
+tester.py
 
-Non-Programming Problems:
-All related material to the written homeworks problems can be found in written.txt
-Some external source:
-https://en.wikipedia.org/wiki/Mobile_operating_system (Problem 2.27)
-
-Programming Problem: ash
+cash
 cash is a very simple shell that supports pipes and three builtin commands:
 cd, history and exit. Builtin commands do not work with pipelines, as specified
 in the spec. 
