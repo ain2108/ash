@@ -1,0 +1,162 @@
+Anton Nefedenkov
+ain2108
+HW1
+
+Problem 2.4:
+
+If we think of an operating system as "everyhting that is shipped by the vendor",
+the answer to the question of browsers and mail programs belonging to the OS vastly depends 
+on the target user. If the OS in question is to be run on a personal computer, maybe providing
+an out of the box browser is not that bad of an idea (from the perspective of the user). 
+But that would mean that our definition is dependent on the enviroment in which the OS is run,
+which is a dependency, and I don't like dependencies. 
+
+For me, the Operating System is the kernel. One absolutely necessary program, which facilitates the
+usage of the machine by being a loving mother to the programs we write. And the programs that we write
+then make some useful work on the request of the user. This definition is also more-greatest-common-divisor-like
+and depends less on the state of the universe. Which is good, becasue less state is more. 
+Under this defintions, the programs like browser and mail client have no place in the kernel, 
+because these are the programs we write for the user to use. Also, these programs should not be 
+inside the kernel, because they don't have to be in there, and because less is more.  
+
+Problem 1.13:
+
+a. 
+For mainframe computers energy is not an issue.
+Another resource that is not of issue for mainframes is the user interface and
+ease of usage in general. These resources are sacrificed to maximize CPU cycles and therefore
+the amount of good work the machine can do per unit of time. Another important resource for these
+systems is the 
+
+b. 
+Workstations are somewhere in between. Most of the work is done by the server, 
+so some of the CPU cycles can be sacrificed for ease of usage and productivity of the
+user. 
+c. 
+Mobile computers should be probably most careful with the battery usage. 
+Another important aspect of mobile computers is to maintain connection to 
+the internet and the mobile network during movement. 
+Similarly to worksataions, mobile computers have to be convenient to use and
+responsive to the user, so other resource, like CPU cycles, will be wasted to 
+achive the functionality.
+
+Problem 1.14:
+
+Consider a situation where multiple individual users use a software. Now every user
+can buy that software and install it on their idividual server coupled with a workstation.
+Or all users can come together, buy the software once, install it on a time-sharing system,
+and make use of it in parallel. The same idea applies to data. If many users are working with the
+same data, and if this data is terabytes big, maybe individual users will be better off having a single copy
+on the time-sharing system, rather then each user storing the data individually. 
+
+Another thing that comes to mind is standaridzation. Like in the CS department, for a lot of classes, hw problems
+are required to compile and run on clic machines. This minimizes the time wasted on figuring out which 
+version of java or python a student was using and why his hw does not work for example.
+
+Problem 1.19:
+
+An interrupt is a signal that comes from the hardware, notifying the OS that there is something hardware related that 
+must be taken care of. Like a keyboard will raise the interrupt flags whenever I hit a key. This causes the CPU to stop doing
+whatever it is doing, and execute the interrupt handler for this particular piece of hardware. 
+
+A trap comes from the software. Similarly to the hardware, a trap will influence the 
+control of the CPU.  For example, a trap can be used by user process to
+ask the operating system to perform a certain task, that user space processes 
+are not able to perform ( like fork() (?)). In other case, traps are used to signify an error.
+When for example a process tries to access memory that it has no access too, during the instruction
+execution, the hardware will spot this (because hardware is aware of the kernel/user mode state) and notify the OS,
+which will then proceed happily to kill your process and notify you by writing Segmentation Fault on the screen.
+At least that's my theory.
+
+Problem 1.27:
+
+The first thing that comes to mind is energy. This is the resource that the OS probably has to optimize for. 
+In traditional PCs, the hardware is plugged into the socket in the wall. So energy consumptions are not 
+too relevant. This is not the case for mobile phones. One also has less RAM coupled with all the functionality
+we expect from the smartphone: taking pictures, streaming videos, playing games with an accelerometer.
+On top of that, we want our phones to be responsive to the user, since imo the lags in response time are especially
+annoying on the touchscreen. 
+
+Wikipedia page on mobile operating systems (https://en.wikipedia.org/wiki/Mobile_operating_system), mentions 
+something about phones being equiped with two operating systems that collaborate on tasks. One is a user oriented,
+with which we can interract directly so to say. The other one, the real-time one, sits on top of some hardware of
+the phone, where buffering delays are unacceptable. I immagine that it is hard enough to make one OS work, but making two OS work side by side with each other is probably harder.
+
+Problem 2.9:
+
+1. Resource allocation
+As a user, when we write our programs, we do not have to worry how and where exactly is our data going to be malloc()ed.
+We know it will (if not, we check the return value and take measures) and we don't care how exactly that happens. When our program is run, from our perspective it exists in isolation from other processes. We also know, that if our program is behaving, the OS will give it sufficient time on the CPU and etc. All these things we don't have to worry about.
+Apart from the fact that we don't have to worry about it, its also very very good that OS is in charge. Otherwise, 
+user space processes could for example be very selfish, and sit on the CPU without letting go. It would also mean, that
+one process could influence the operation of another process, against the will of the latter. 
+
+2. I/O control
+OS controls the usage of the I/O. It protects the I/O devices from incorrect usage by user processes. 
+It will also protect the processes from each other during the I/O usage. Such protection would be impossible
+to guarantee if user space processes would interact with the hardware directly.
+
+3. File-system
+OS provides a useful abstraction for the information in the storage. This way, the access to the storage is 
+standardized and instead of looking for stuff, we ask the OS to give it to us. Since the OS is in charge of the
+organization of the file-system, two processes are able to talk about the same file with relative ease by
+giving the file a name or know where that file is in the file-system tree. If user processes would be left in 
+charge of the file-system, nobody would agree on anything. 
+
+4. Error detection
+Somebody has to be in charge and know what is right and what is wrong on the machine. The OS continously
+detects errors and makes an effort to recover from them. Some user processes, without a strinct mother, could potentially become dangerous to well behaved processes. Somebody has to be there to instill law and order. Processes 
+cannot do that because there are many procesesses, and we are not sure about their code of conduct. And even well 
+behaved processes make mistakes.
+
+5. Interprocess communication
+Eventhough we want processes to exist in different universe, where the crash of one process cannot influence the state
+of another, ocasionally we want the to communicate. Since the OS was the one to isolate the processes, it only 
+makes sense if it is the one to allow the a pipe of comminication.
+
+
+Problem 2.18:
+
+The two models are the message-passing model and the shared memory model.
+Normally, processes exist in total isolation. So for them to share data, operating system needs to provide some means
+of communication. The benefit of message-passing model is that it prevents processes from 
+interfering with the operation of each other, but at the same time allows them to share information using the OS
+as the middle man. 
+The shared memory model is the situation where two processes, contrary to the default setup of isolation, agree
+to use some shared memory. The benefit of this approach is the speed. It is much faster then the message-passing model 
+because processes can directly write data to the shared memeory. The minus of this approach is the cognitive load
+that is put onto the programmer. The programmer has to be careful to make sure that the two processes sharing the 
+memory do not interfere in unexpected ways with each other's operaton.
+
+
+Problem 2.21:
+
+The advantages of microkernels is their small size. If new services are to be added, they will be added into the 
+user space, so they kernel does not need to be touched. If a kernel is to be modified, it is usually much simpler 
+then to modify th monolithic kernel, since there are fewer dependencies to worry about. Also, since most of the 
+services are in the user mode, when a service crashes, the rest of the system does not have to crash too. 
+User programs and microkernels talk using the message passing model, where the message is being passed through the
+kernel, allowing the kernel to supervise the dialogue. 
+The main disadvantage of the microkernels is the system-function overhead. 
+
+
+Problem 2.24:
+
+Android uses Dalvik Virtual Machine as opposed to the standard JVM. 
+Java class files are first compiled intot he bycode, and then translated into
+an executable designed to run on DVM. DVM was designed with mobile computing in mind, 
+while JVM was not. Special Android API for Java development is used instead of 
+java API, which again is done from the standpoint of optimisation for mobile computing.
+
+
+
+
+
+
+
+
+
+
+
+
+
