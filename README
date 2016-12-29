@@ -1,9 +1,7 @@
 Anton Nefededenkov
 ain2108
-HW1 
-OSI Fall 2016
 
-Submission files:
+Files:
 Makefile
 README
 shell.c
@@ -16,7 +14,7 @@ All related material to the written homeworks problems can be found in written.t
 Some external source:
 https://en.wikipedia.org/wiki/Mobile_operating_system (Problem 2.27)
 
-Programming Problem: cash
+Programming Problem: ash
 cash is a very simple shell that supports pipes and three builtin commands:
 cd, history and exit. Builtin commands do not work with pipelines, as specified
 in the spec. 
@@ -50,7 +48,7 @@ Each error is assigned an integer value. The function handle_error(int ERROR_COD
 As of now, for most of the errors, error handle = careful termination of the program. 
 I think this should cover it more or less.
 
-cash should run valgrind clean.
+ash should run valgrind clean.
 If run on MAC, there will be 10k bytes displayed as still reachable on exit.
 At the top of shell.c there is a flag ON_MAC, that if set to 1 will 
 This problem does not exist on Debian.
@@ -183,4 +181,3 @@ Fixed a bug with argc. Added formatting to simplify pipe interpretation. (4 days
 Added history -c command (7 days ago) <ain2108>
 Fixed the history (7 days ago) <ain2108>
 The skeleton of the shell. History is not working according to the spec. (Inverse order) (7 days ago) <ain2108>
-template source (10 days ago) <Bo Gan>
