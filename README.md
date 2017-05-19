@@ -136,39 +136,3 @@ w4118@w4118:~/OS/tester-hmwk1$ python myhmw1-tests.py
 11 of 11 tests passed
 
 
-
-
-
-## Git Log
-(HEAD, master) Finsihed the written part of the hw (53 seconds ago) <ain2108>
-(origin/master, origin/HEAD) added half of the written part (13 hours ago) <ain2108>
-Ran valgrind again to make sure everything is still memory error free. Dumped the ouput into README. (20 hours ago) <Anton Nefedenkov>
-Merge branch 'master' of https://github.com/W4118/hmwk1-ain2108 (20 hours ago) <ain2108>
-Done with the programming part (21 hours ago) <Anton Nefedenkov>
-Tiny little bug fixed. README added. (20 hours ago) <ain2108>
-more more more more robustness (21 hours ago) <ain2108>
-added tests on robustness (21 hours ago) <Anton Nefedenkov>
-Made the shell a littl more robust to broken input (22 hours ago) <ain2108>
-Added few of my own tests. Everything seems to work. Addiing the to the repo. (22 hours ago) <W4118 Student>
-moved some stuff from heap to stack (2 days ago) <ain2108>
-forgot to free the heap of children where execv failed (2 days ago) <ain2108>
-closing the pipes in case of error in execv (2 days ago) <ain2108>
-children have still reachable bytes on execl error, fixing it (2 days ago) <ain2108>
-fixed a potential bug with history (2 days ago) <ain2108>
-more fixes for the spec (2 days ago) <ain2108>
-one of tests is fails, but the expected output and the output seem identical (2 days ago) <ain2108>
-fixed to satisfy the change in the history spec (2 days ago) <ain2108>
-Everything seems to work just as expected. Added error handling to all system calls (2 days ago) <ain2108>
-fixed bugs with history. No errors in pipe usage. Need to finish adding error recovery (2 days ago) <ain2108>
-Shell is more or less ready. Pipes and all built ins working as specified. Need to clean code and fix few bugs. (2 days ago) <ain2108>
-Implmentation for single pipe complete (2 days ago) <ain2108>
-Fixed memory errors in history (2 days ago) <ain2108>
-Problem found with pipe recycling (3 days ago) <ain2108>
-Multiple pipes template implemented and working. There is some bug in history again... (3 days ago) <ain2108>
-global var rename (4 days ago) <ain2108>
-Fixed minoe concurance bug. (4 days ago) <ain2108>
-Added the functionality to support pipes. Left allow multiple pipes as well as better interpretation (4 days ago) <ain2108>
-Fixed a bug with argc. Added formatting to simplify pipe interpretation. (4 days ago) <ain2108>
-Added history -c command (7 days ago) <ain2108>
-Fixed the history (7 days ago) <ain2108>
-The skeleton of the shell. History is not working according to the spec. (Inverse order) (7 days ago) <ain2108>
