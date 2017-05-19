@@ -143,7 +143,7 @@ w4118@w4118:~/OS/tester-hmwk1$ python myhmw1-tests.py
 (HEAD, master) Finsihed the written part of the hw (53 seconds ago) <ain2108>
 (origin/master, origin/HEAD) added half of the written part (13 hours ago) <ain2108>
 Ran valgrind again to make sure everything is still memory error free. Dumped the ouput into README. (20 hours ago) <Anton Nefedenkov>
-3843188 - Merge branch 'master' of https://github.com/W4118/hmwk1-ain2108 (20 hours ago) <ain2108>
+Merge branch 'master' of https://github.com/W4118/hmwk1-ain2108 (20 hours ago) <ain2108>
 Done with the programming part (21 hours ago) <Anton Nefedenkov>
 Tiny little bug fixed. README added. (20 hours ago) <ain2108>
 more more more more robustness (21 hours ago) <ain2108>
