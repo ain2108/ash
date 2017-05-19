@@ -139,15 +139,13 @@ w4118@w4118:~/OS/tester-hmwk1$ python myhmw1-tests.py
 
 
 
->>>>>>>>>>>>>>>>>>>>>>>>>>> GIT LOG <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+## Git Log
 (HEAD, master) Finsihed the written part of the hw (53 seconds ago) <ain2108>
 (origin/master, origin/HEAD) added half of the written part (13 hours ago) <ain2108>
 Ran valgrind again to make sure everything is still memory error free. Dumped the ouput into README. (20 hours ago) <Anton Nefedenkov>
 3843188 - Merge branch 'master' of https://github.com/W4118/hmwk1-ain2108 (20 hours ago) <ain2108>
-
-- Done with the programming part (21 hours ago) <Anton Nefedenkov>
-- Tiny little bug fixed. README added. (20 hours ago) <ain2108>
-
+Done with the programming part (21 hours ago) <Anton Nefedenkov>
+Tiny little bug fixed. README added. (20 hours ago) <ain2108>
 more more more more robustness (21 hours ago) <ain2108>
 added tests on robustness (21 hours ago) <Anton Nefedenkov>
 Made the shell a littl more robust to broken input (22 hours ago) <ain2108>
@@ -159,7 +157,6 @@ children have still reachable bytes on execl error, fixing it (2 days ago) <ain2
 fixed a potential bug with history (2 days ago) <ain2108>
 more fixes for the spec (2 days ago) <ain2108>
 one of tests is fails, but the expected output and the output seem identical (2 days ago) <ain2108>
-removed /Users/Nemo/.opam/4.02.3/bin:/Library/Frameworks/Python.framework/Versions/3.4/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/Library/TeX/texbin:/usr/local/bin:/usr/local/opt/llvm/bin lookup to fulfill the spec (2 days ago) <ain2108>
 fixed to satisfy the change in the history spec (2 days ago) <ain2108>
 Everything seems to work just as expected. Added error handling to all system calls (2 days ago) <ain2108>
 fixed bugs with history. No errors in pipe usage. Need to finish adding error recovery (2 days ago) <ain2108>
