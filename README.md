@@ -1,14 +1,14 @@
 Anton Nefededenkov
 ain2108
 
-Files:
+## Files:
 Makefile
 README
 shell.c
 shell.h
 tester.py
 
-cash
+## cash
 cash is a very simple shell that supports pipes and three builtin commands:
 cd, history and exit. Builtin commands do not work with pipelines, as specified
 in the spec. 
@@ -42,12 +42,12 @@ Each error is assigned an integer value. The function handle_error(int ERROR_COD
 As of now, for most of the errors, error handle = careful termination of the program. 
 I think this should cover it more or less.
 
-ash should run valgrind clean.
+cash should run valgrind clean.
 If run on MAC, there will be 10k bytes displayed as still reachable on exit.
 At the top of shell.c there is a flag ON_MAC, that if set to 1 will 
 This problem does not exist on Debian.
 
->>>>>>>>>>>>>>>>>>>>>>>>>>>> VALGRIND <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+## Valgrind
 w4118@w4118:~/OS/hmwk1-ain2108$ valgrind ./w4118_sh
 ==1275== Memcheck, a memory error detector
 ==1275== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
@@ -89,7 +89,7 @@ Build the shell by simply running make in the root directory.
 Notice, the test run is done on OS X, therefore paths are slightly 
 different. 
 
->>>>>>>>>>>>>>>>>>>>>>>>>>> TEST RUN <<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+## Test Run
 nemo$ make
 gcc -I -Wall   -c -o shell.o shell.c
 gcc -o w4118_sh shell.o -I -Wall 
@@ -123,7 +123,7 @@ nemo$ make clean
 rm shell.o w4118_sh
 
 
->>>>>>>>>>>>>>>>>>>>>>>>>> TEST SCRIPT <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+## Test Script
 myhmw1-tests.py contains the standard tests plus few more that I have added.
 I ran out of time, so my set of tests is far from impressive. 
 The tester completes all the tests succesfully on Debian:
